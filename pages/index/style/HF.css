@@ -1,0 +1,130 @@
+/*fotter mobile*/
+
+#botao-inicio {
+  text-align: center;
+}
+
+#botao-conta {
+  text-align: center;
+}
+
+#botao-nivel {
+  text-align: center;
+}
+
+body {
+  margin: 0%;
+}
+footer {
+  color: aliceblue;
+}
+#botao-conta {
+  P {
+    font-weight: bold;
+  }
+}
+#footer-inicio {
+  margin: -2vmin;
+  background-color: #023859;
+  display: flex;
+  justify-content: space-between;
+  #botao-inicio {
+    p {
+      font-weight: bold;
+    }
+
+    img {
+      background-color: aliceblue;
+      border-radius: 17vmin;
+      height: 16vmin;
+      width: auto;
+    }
+  }
+
+  #botao-conta {
+    P {
+      font-weight: bold;
+    }
+  }
+  img {
+    border-radius: 17vmin;
+    height: 16vmin;
+    width: auto;
+    margin-left: 5vmin;
+    margin-right: 5vmin;
+    margin-bottom: -4vmin;
+    margin-top: 3vmin;
+  }
+  #inicio-texto {
+    font-weight: bold;
+  }
+}
+
+#footer-niveis {
+  margin: -2vmin;
+  background-color: #023859;
+  display: flex;
+  justify-content: space-between;
+  #botao-nivel {
+    p {
+      font-weight: bold;
+    }
+    img {
+      background-color: aliceblue;
+      border-radius: 17vmin;
+      height: 16vmin;
+      width: auto;
+    }
+  }
+  img {
+    height: 16vmin;
+    width: auto;
+    margin-left: 5vmin;
+    margin-right: 5vmin;
+    margin-bottom: -4vmin;
+    margin-top: 3vmin;
+  }
+}
+
+#footer-conta {
+  margin: -2vmin;
+  display: flex;
+  background-color: #023859;
+  justify-content: space-between;
+  #botao-conta {
+    p {
+      font-weight: bold;
+    }
+    img {
+      background-color: aliceblue;
+      border-radius: 17vmin;
+      height: 16vmin;
+      width: auto;
+    }
+  }
+  img {
+    border-radius: 17vmin;
+    height: 16vmin;
+    width: auto;
+    margin-left: 5vmin;
+    margin-right: 5vmin;
+    margin-bottom: -4vmin;
+    margin-top: 3vmin;
+  }
+}
+
+#header {
+  padding-bottom: 1%;
+  background-color: #023859;
+  display: flex;
+  height: 16vmin;
+  margin: 0;
+  #header-faixa {
+    display: flex;
+  }
+  img {
+    height: 8vmin;
+    padding-left: 3vmin;
+    padding-top: 5vmin;
+  }
+}

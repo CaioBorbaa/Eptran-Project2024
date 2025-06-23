@@ -1,0 +1,64 @@
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciamento da conta</title>
+    <link rel="stylesheet" href="../styles/geral.css" />
+    <link rel="stylesheet" href="../styles/loginCadastro.css" />
+    <link rel="stylesheet" href="../styles/configuracoes.css">
+  </head>
+  <body >
+    <div class="div-botao-voltar-configuracoes">
+        <a href="../pages/telaConfiguracoes.html">
+            <img src="../styles/imagens/seta-voltar-preta.svg" alt="Voltar">
+            <p>Voltar</p>
+        </a>
+    </div>
+    <main id="main-content">  
+      <h1 class="palavras-configuracoes" id="h1-gerenciamento-conta">Gerenciamento da conta</h1>
+      <section class="section-gerenciamento-conta">
+        <button onclick="handlePopup(false)" class="SairInativar">
+          Sair
+        </button>
+      </section>
+      <section class="section-gerenciamento-conta">
+        <button onclick="handlePopup(true)" class="SairInativar">
+          Inativar conta
+        </button>
+      </section>
+    </main>
+    <div class="popup" id="popup">
+      <button id="close-x" class="close-popup" type="button" onclick="handlePopup(false)">
+        x
+      </button>
+      <div id="conteudo">
+        <h2 id="title"></h2>
+        <p id="desc"></p>
+        <button id="close-popup-button" class="close-popup-button" type="button"></button>
+      </div>
+    </div>
+    <div class="overlay" id="overlay" onclick="handlePopup(false)"></div>
+
+    <script>
+      const popup = document.getElementById("popup");
+      const overlay = document.getElementById("overlay");
+      const mainContent = document.getElementById("main-content");
+      const title = document.getElementById("title");
+      const desc = document.getElementById("desc");
+      const closePopUp = document.getElementById("close-popup-button");
+
+      function handlePopup(isInactive) {
+        popup.classList.toggle("opened");
+        title.textContent = isInactive
+          ? "Você tem certeza que deseja inativar sua conta?"
+          : "Você tem certeza que deseja sair?";
+        desc.textContent = isInactive
+          ? "Esta ação deixará sua conta inativa, mas não a excluirá. Você poderá recuperá-la mais tarde caso deseje."
+          : "";
+        closePopUp.innerHTML = isInactive ? "Inativar Conta" : "Sair";
+        overlay.classList.toggle("opened");
+        mainContent.classList.toggle("blurred");
+      }
+    </script>
+  </body>
+</html>

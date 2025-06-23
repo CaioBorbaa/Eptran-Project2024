@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esqueceu a Senha</title>
+    <link rel="stylesheet" href="../styles/loginCadastro.css" />
+    <link rel="stylesheet" href="../styles/geral.css" />
+  </head>
+<header>
+    <img
+      src="../styles/imagens/logo_eptran.png"
+      alt="Logo da Prefeitura de Joinville"
+    />
+  </header>
+  <div>
+    <a href="./telaCadastro4.html"
+      ><button class="botao-voltar">
+        <img
+          class="seta-para-esquerda"
+          src="../styles/imagens/seta-voltar-preta.svg"
+          alt=""
+        />Voltar
+      </button></a
+    >
+  </div>
+  <div class="faca-seu-cadastro">
+    <h2>Crie sua nova senha</h2>
+  </div>
+  <div class="classe-do-cadastro">
+    <form class="forms-do-cadastro" method="POST" action="">
+      <div class="divisoes-formulario">
+        <label for="senha-usuario">Crie sua senha:</label>
+        <input
+          type="password"
+          name="senha-usuario"
+          id="senha-usuario"
+          required
+        />
+      </div>
+
+      <div class="divisoes-formulario divisao-5-formulario">
+        <label for="confirma-senha-usuario">Confirme sua senha:</label>
+        <input
+          type="password"
+          name="confirma-senha-usuario"
+          id="confirma-senha-usuario"
+          required
+        />
+      </div>
+
+      <div id="div-requisitos-senha">
+        <div>
+          <h3>Sua senha deve ter:</h3>
+        </div>
+        <div class="div-alinhamento-senha">
+          <img src="../styles/imagens/imagem-x-senha.png" alt="" />
+          <p>No mínimo 8 caracteres</p>
+        </div>
+        <div class="div-alinhamento-senha">
+          <img src="../styles/imagens/imagem-x-senha.png" alt="" />
+          <p>Letras maiúsculas e minúsculas</p>
+        </div>
+        <div class="div-alinhamento-senha">
+          <img src="../styles/imagens/imagem-x-senha.png" alt="" />
+          <p>Pelo menos um número</p>
+        </div>
+        <div class="div-alinhamento-senha">
+          <img src="../styles/imagens/imagem-azul-senha.png" alt="" />
+          <p>Não pode conter acentos</p>
+        </div>
+      </div>
+
+      <div class="div-passos-cadastro">
+        <input
+          type="submit"
+          name="tela-cadastro-cinco"
+          value="Alterar senha"
+          class="botao-seguinte"
+          required
+        />
+      </div>
+    </form>
+  </div>

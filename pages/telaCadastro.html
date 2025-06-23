@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro EPTRAN</title>
+    <link rel="stylesheet" href="../styles/loginCadastro.css"/>
+    <link rel="stylesheet" href="../styles/geral.css"/>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer src="../scripts/cadastro.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="../styles/imagens/logo_eptran.png" alt="Logo da Prefeitura de Joinville" />
+    </header>
+
+    <!--Inicio da tela-cadrastro-1-->
+    <section id="section-principal-tela-1" class="block">
+      <div>
+        <a href="./telaLogin.html"><button class="botao-voltar"><img class="seta-para-esquerda" src="../styles/imagens/seta-voltar-preta.svg" alt="" />Voltar</button></a>
+      </div>
+
+      <div class="faca-seu-cadastro">
+        <h2>Faça o seu cadastro</h2>
+        <p class="paragrafo-informacoes-cadastro">Informações Pessoais</p>
+      </div>
+
+      <div class="classe-do-cadastro">
+        <form class="forms-do-cadastro" method="POST" action="">
+        
+          <div class="divisoes-formulario">
+            <label for="nome-completo">Nome completo:</label>
+            <input type="text" name="nome-completo" id="nome-completo" required/>
+          </div>
+
+          <div class="divisoes-formulario">
+            <label for="data-nasc-usuario">Data Nascimento:</label>
+            <input type="date" name="data-nasc-usuario" id="data-nasc-usuario" required/>
+          </div>
+
+          <div class="divisoes-formulario divisao-1-formulario">
+            <label for="genero-usuario">Gênero:</label>
+            <select required name="genero-usuario" id="genero-usuario">
+              <option selected disabled>Selecione uma opção</option>
+              <option value="feminino">Feminino</option>
+              <option value="masculino">Masculino</option>
+              <option value="outro">Outro</option>
+              <option value="prefiro-nao-informar">Prefiro não informar</option>
+            </select>
+          </div>
+
+          <div class="div-passos-cadastro">
+            <input type="button" value="Seguinte" class="botao-seguinte" name="tela-cadastro-um" onclick="apareceSectionDois()"/>
+            <div id="div-bolas">
+              <span class="bola-aberta"></span>
+              <span class="bola-fechado"></span>
+              <span class="bola-fechado"></span>
+              <span class="bola-fechado"></span>
+              <span class="bola-fechado"></span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!--Fim da tela-cadrastro-1-->
+
+    <!--Inicio da tela cadastro 2-->
+    <section id="section-principal-tela-2" class="none">
+      <div>
+        <button onclick="voltarSectionUm()" class="botao-voltar" id="botao-voltar"><img class="seta-para-esquerda" src="../styles/imagens/seta-voltar-preta.svg" alt="" />Voltar</button>
+      </div>
+
+      <div class="faca-seu-cadastro">
+        <h2>Faça o seu cadastro</h2>
+      </div>
+
+      <div class="classe-do-cadastro">
+        <form class="forms-do-cadastro" method="POST" action="">
+          <div class="divisoes-formulario">
+            <label for="nome-de-usuario">Nome de usuário:</label>
+            <input type="text" name="nome-de-usuario" id="nome-de-usuario" required />
+          </div>
+
+          <div class="divisoes-formulario divisao-2-formulario">
+            <label for="email-usuario">Email:</label>
+            <input type="email" name="email-usuario" id="email-usuario" required />
+          </div>
+
+          <div id="div-opc-estudante-ou-nao">
+            <p>Escolha a opção que mais se adequa a você:</p>
+            <div id="div-opc-estudante">
+              <input type="radio" class="bolinha-radio" name="opcao-estudante-nao" value="estudante-ensino-medio-fundamental" checked/>
+              <label for="estudante-ensino-medio-fundamental">Estou no ensino fundamental ou médio</label>
+            </div>
+
+            <div id="div-opc-nao-estudante">
+              <input type="radio" class="bolinha-radio" name="opcao-estudante-nao" value="nao-estudante" />
+              <label for="nao-estudante">Não estou mais estudando</label>
+            </div>
+          </div>
+          <div class="div-passos-cadastro">
+            <input type="button" value="Seguinte" class="botao-seguinte" name="tela-cadastro-dois" onclick="apareceSectionTres()"/>
+            <div id="div-bolas">
+              <span class="bola-aberta"></span>
+              <span class="bola-aberta"></span>
+              <span class="bola-fechado"></span>
+              <span class="bola-fechado"></span>
+              <span class="bola-fechado"></span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!--Fim da tela cadastro 2-->
+
+    <!--Inicio da tela cadastro 3-->
+    <section id="section-principal-tela-3" class="none">
+      <div>
+        <button class="botao-voltar" onclick="voltarSectionDois()"><img class="seta-para-esquerda" src="../styles/imagens/seta-voltar-preta.svg" alt="" />Voltar</button>
+      </div>
+      <div class="faca-seu-cadastro">
+        <h2>Faça o seu cadastro</h2>
+        <p class="paragrafo-informacoes-cadastro">Informações Institucionais</p>
+      </div>
+      <div class="classe-do-cadastro">
+        <form class="forms-do-cadastro" method="POST" action="">
+          <div class="divisoes-formulario">
+            <label for="categoria-de-ensino">Categoria de Ensino:</label>
+            <select required name="categoria-de-ensino" id="categoria-de-ensino">
+              <option selected disabled>Selecione uma opção</option>
+              <option value="series-iniciais">Séries Iniciais</option>
+              <option value="series-finais">Séries Finais</option>
+              <option value="ensino-medio">Ensino Médio</option>
+            </select>
+          </div>
+
+          <div class="divisoes-formulario divisao-4-formulario">
+            <label for="instituicao-do-aluno">Instituição de Ensino:</label>
+            <input type="text" name="nome-escola" id="nome-escola"></input>
+            <div class="div-passos-cadastro">
+              <input type="button" value="Seguinte" class="botao-seguinte" name="tela-cadastro-tres"onclick="apareceSectionQuatro()"/>
+
+              <div id="div-bolas">
+                <span class="bola-aberta"></span>
+                <span class="bola-aberta"></span>
+                <span class="bola-aberta"></span>
+                <span class="bola-fechado"></span>
+                <span class="bola-fechado"></span>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!--Fim tela cadastro 3-->
+
+    <!--Inicio da tela cadastro 4-->
+    <section id="section-principal-tela-4" class="none">
+      <div>
+        <button class="botao-voltar" onclick="voltarSectionTres()"><img class="seta-para-esquerda" src="../styles/imagens/seta-voltar-preta.svg" alt="" />Voltar</button>
+      </div>
+
+
+      <div class="faca-seu-cadastro">
+        <h2>Faça o seu cadastro</h2>
+        <p class="paragrafo-informacoes-cadastro">Informações Pessoais</p>
+      </div>
+
+      <div class="classe-do-cadastro">
+        <form class="forms-do-cadastro" method="POST" action="">
+
+          <div class="divisoes-formulario"> <!--CEP -->
+            <label for="cep">CEP:</label>
+            <input type="text" name="cep" id="nome-completo" required />
+          </div>
+
+          <div class="divisoes-formulario"> <!--Estado -->
+            <label for="estado">Estado:</label>
+            <select type="text" name="estado" id="nome-completo" value="Santa Catarina" required>
+              <option selected disabled>Selecione uma opção</option>
+              <option value="santa-catarina">Santa Catarina</option>
+              <option selected disabled>Amazonas</option>
+              <option selected disabled>Pará</option>
+              <option selected disabled>Amapá</option>
+              <option selected disabled>Roraima</option>
+              <option selected disabled>Rondônia</option>
+              <option selected disabled>Acre</option>
+              <option selected disabled>Maranhão</option>
+              <option selected disabled>Piauí</option>
+              <option selected disabled>Ceará</option>
+              <option selected disabled>Rio Grande do Norte</option>
+              <option selected disabled>Paraíba</option>
+              <option selected disabled>Pernambuco</option>
+              <option selected disabled>Alagoas</option>
+              <option selected disabled>Sergipe</option>
+              <option selected disabled>Bahia</option>
+              <option selected disabled>Mato Grosso do Sul</option>
+              <option selected disabled>Mato Grosso</option>
+              <option selected disabled>Distrito Federal</option>
+              <option selected disabled>Minas Gerais</option>
+              <option selected disabled>Espírito Santo</option>
+              <option selected disabled>Rio de Janeiro</option>
+              <option selected disabled>São Paulo</option>
+              <option selected disabled>Paraná</option>
+              <option selected disabled>Rio Grande do Sul</option>
+            </select>
+          </div>
+
+          <div class="divisoes-formulario"> <!--Bairro -->
+            <label for="bairro">Bairro:</label>
+            <input type="text" name="bairro" id="nome-completo" required />
+          </div>
+
+          <div class="divisoes-formulario divisao-3-formulario"> <!--Cidade -->
+            <label for="genero-usuario">Cidade:</label>
+            <select required name="genero-usuario" id="genero-usuario">
+              <option selected disabled>Selecione uma opção</option>
+              <option value="abelardo-luz">Abelardo Luz</option>
+              <option value="agrolandia">Agrolândia</option>
+              <option value="agronomica">Agronômica</option>
+              <option value="agua-doce">Água Doce</option>
+              <option value="aguas-de-chapeco">Águas de Chapecó</option>
+              <option value="aguas-frias">Águas Frias</option>
+              <option value="aguas-mornas">Águas Mornas</option>
+              <option value="alfredo-wagner">Alfredo Wagner</option>
+              <option value="alto-bela-vista">Alto Bela Vista</option>
+              <option value="anchieta">Anchieta</option>
+              <option value="angelina">Angelina</option>
+              <option value="anita-garibaldi">Anita Garibaldi</option>
+              <option value="anitapolis">Anitápolis</option>
+              <option value="antonio-carlos">Antônio Carlos</option>
+              <option value="apiuna">Apiúna</option>
+              <option value="arabuta">Arabutã</option>
+              <option value="araquari">Araquari</option>
+              <option value="ararangua">Araranguá</option>
+              <option value="armazem">Armazém</option>
+              <option value="arroio-trinta">Arroio Trinta</option>
+              <option value="arvoredo">Arvoredo</option>
+              <option value="ascurra">Ascurra</option>
+              <option value="atalanta">Atalanta</option>
+              <option value="aurora">Aurora</option>
+              <option value="balneario-arroio-do-silva">Balneário Arroio do Silva</option>
+              <option value="balneario-barra-do-sul">Balneário Barra do Sul</option>
+              <option value="balneario-camboriu">Balneário Camboriú</option>
+              <option value="balneario-gaivota">Balneário Gaivota</option>
+              <option value="bandeirante">Bandeirante</option>
+              <option value="barra-bonita">Barra Bonita</option>
+              <option value="barra-velha">Barra Velha</option>
+              <option value="bela-vista-do-toldo">Bela Vista do Toldo</option>
+              <option value="belmonte">Belmonte</option>
+              <option value="benedito-novo">Benedito Novo</option>
+              <option value="biguacu">Biguaçu</option>
+              <option value="blumenau">Blumenau</option>
+              <option value="bocaina-do-sul">Bocaina do Sul</option>
+              <option value="bom-jardim-da-serra">Bom Jardim da Serra</option>
+              <option value="bom-jesus">Bom Jesus</option>
+              <option value="bom-jesus-do-oeste">Bom Jesus do Oeste</option>
+              <option value="bom-retiro">Bom Retiro</option>
+              <option value="bombinhas">Bombinhas</option>
+              <option value="botuvera">Botuverá</option>
+              <option value="braco-do-norte">Braço do Norte</option>
+              <option value="braco-do-trombudo">Braço do Trombudo</option>
+              <option value="brunopolis">Brunópolis</option>
+              <option value="brusque">Brusque</option>
+              <option value="cacador">Caçador</option>
+              <option value="caibi">Caibi</option>
+              <option value="calmon">Calmon</option>
+              <option value="camboriu">Camboriú</option>
+              <option value="campo-alegre">Campo Alegre</option>
+              <option value="campo-belo-do-sul">Campo Belo do Sul</option>
+              <option value="campo-ere">Campo Erê</option>
+              <option value="campos-novos">Campos Novos</option>
+              <option value="canelinha">Canelinha</option>
+              <option value="canoinhas">Canoinhas</option>
+              <option value="capao-alto">Capão Alto</option>
+              <option value="capinzal">Capinzal</option>
+              <option value="capivari-de-baixo">Capivari de Baixo</option>
+              <option value="catanduvas">Catanduvas</option>
+              <option value="caxambu-do-sul">Caxambu do Sul</option>
+              <option value="celso-ramos">Celso Ramos</option>
+              <option value="cerro-negro">Cerro Negro</option>
+              <option value="chapadao-do-lageado">Chapadão do Lageado</option>
+              <option value="chapeco">Chapecó</option>
+              <option value="cocal-do-sul">Cocal do Sul</option>
+              <option value="concordia">Concórdia</option>
+              <option value="cordilheira-alta">Cordilheira Alta</option>
+              <option value="coronel-freitas">Coronel Freitas</option>
+              <option value="coronel-martins">Coronel Martins</option>
+              <option value="correia-pinto">Correia Pinto</option>
+              <option value="corupa">Corupá</option>
+              <option value="criciuma">Criciúma</option>
+              <option value="cunha-pora">Cunha Porã</option>
+              <option value="cunhatai">Cunhataí</option>
+              <option value="curitibanos">Curitibanos</option>
+              <option value="descanso">Descanso</option>
+              <option value="dionisio-cerqueira">Dionísio Cerqueira</option>
+              <option value="dona-emma">Dona Emma</option>
+              <option value="doutor-pedrinho">Doutor Pedrinho</option>
+              <option value="entre-rios">Entre Rios</option>
+              <option value="ermo">Ermo</option>
+              <option value="erval-velho">Erval Velho</option>
+              <option value="faxinal-dos-guedes">Faxinal dos Guedes</option>
+              <option value="flor-do-sertao">Flor do Sertão</option>
+              <option value="florianopolis">Florianópolis</option>
+              <option value="formosa-do-sul">Formosa do Sul</option>
+              <option value="forquilhinha">Forquilhinha</option>
+              <option value="fraiburgo">Fraiburgo</option>
+              <option value="frei-rogerio">Frei Rogério</option>
+              <option value="galvao">Galvão</option>
+              <option value="garopaba">Garopaba</option>
+              <option value="garuva">Garuva</option>
+              <option value="gaspar">Gaspar</option>
+              <option value="governador-celso-ramos">Governador Celso Ramos</option>
+              <option value="grao-para">Grão-Pará</option>
+              <option value="gravatal">Gravatal</option>
+              <option value="guabiruba">Guabiruba</option>
+              <option value="guaraciaba">Guaraciaba</option>
+              <option value="guaramirim">Guaramirim</option>
+              <option value="guaruja-do-sul">Guarujá do Sul</option>
+              <option value="guatambu">Guatambu</option>
+              <option value="herval-doeste">Herval d'Oeste</option>
+              <option value="ibiam">Ibiam</option>
+              <option value="ibicare">Ibicaré</option>
+              <option value="ibirama">Ibirama</option>
+              <option value="icara">Içara</option>
+              <option value="ilhota">Ilhota</option>
+              <option value="imarui">Imaruí</option>
+              <option value="imbituba">Imbituba</option>
+              <option value="imbuia">Imbuia</option>
+              <option value="indaial">Indaial</option>
+              <option value="iomere">Iomerê</option>
+              <option value="ipira">Ipira</option>
+              <option value="ipora-do-oeste">Iporã do Oeste</option>
+              <option value="ipuacu">Ipuaçu</option>
+              <option value="ipumirim">Ipumirim</option>
+              <option value="iraceminha">Iraceminha</option>
+              <option value="irani">Irani</option>
+              <option value="irati">Irati</option>
+              <option value="irineopolis">Irineópolis</option>
+              <option value="ita">Itá</option>
+              <option value="itaiopolis">Itaiópolis</option>
+              <option value="itajai">Itajaí</option>
+              <option value="itapema">Itapema</option>
+              <option value="itapiranga">Itapiranga</option>
+              <option value="itapoa">Itapoá</option>
+              <option value="ituporanga">Ituporanga</option>
+              <option value="jabora">Jaborá</option>
+              <option value="jacinto-machado">Jacinto Machado</option>
+              <option value="jaguaruna">Jaguaruna</option>
+              <option value="jaragua-do-sul">Jaraguá do Sul</option>
+              <option value="jardinopolis">Jardinópolis</option>
+              <option value="joacaba">Joaçaba</option>
+              <option value="joinville">Joinville</option>
+              <option value="jose-boiteux">José Boiteux</option>
+              <option value="jupia">Jupiá</option>
+              <option value="lacerdopolis">Lacerdópolis</option>
+              <option value="lages">Lages</option>
+              <option value="laguna">Laguna</option>
+              <option value="lajeado-grande">Lajeado Grande</option>
+              <option value="laurentino">laurentino</option>
+              <option value="lauro_muller">Lauro Müller</option>
+              <option value="lebon_regis">Lebon Régis</option>
+              <option value="leoberto_leal">Leoberto Leal</option>
+              <option value="lindoia_do_sul">Lindóia do Sul</option>
+              <option value="lontras">Lontras</option>
+              <option value="luiz_alves">Luiz Alves</option>
+              <option value="luzerna">Luzerna</option>
+              <option value="macieira">Macieira</option>
+              <option value="mafra">Mafra</option>
+              <option value="major_gercino">Major Gercino</option>
+              <option value="major_vieira">Major Vieira</option>
+              <option value="maracaja">Maracajá</option>
+              <option value="maravilha">Maravilha</option>
+              <option value="marema">Marema</option>
+              <option value="massaranduba">Massaranduba</option>
+              <option value="matos_costa">Matos Costa</option>
+              <option value="meleiro">Meleiro</option>
+              <option value="mirim_doce">Mirim Doce</option>
+              <option value="modelo">Modelo</option>
+              <option value="mondai">Mondaí</option>
+              <option value="monte_carlo">Monte Carlo</option>
+              <option value="monte_castelo">Monte Castelo</option>
+              <option value="morro_da_fumaca">Morro da Fumaça</option>
+              <option value="morro_grande">Morro Grande</option>
+              <option value="navegantes">Navegantes</option>
+              <option value="nova_erechim">Nova Erechim</option>
+              <option value="nova_itaberaba">Nova Itaberaba</option>
+              <option value="nova_trento">Nova Trento</option>
+              <option value="nova_veneza">Nova Veneza</option>
+              <option value="novo_horizonte">Novo Horizonte</option>
+              <option value="orleans">Orleans</option>
+              <option value="otacilio_costa">Otacílio Costa</option>
+              <option value="ouro">Ouro</option>
+              <option value="ouro_verde">Ouro Verde</option>
+              <option value="paial">Paial</option>
+              <option value="painel">Painel</option>
+              <option value="palhoca">Palhoça</option>
+              <option value="palma_sola">Palma Sola</option>
+              <option value="palmeira">Palmeira</option>
+              <option value="palmitos">Palmitos</option>
+              <option value="papanduva">Papanduva</option>
+              <option value="paraiso">Paraíso</option>
+              <option value="passo_de_torres">Passo de Torres</option>
+              <option value="passos_maia">Passos Maia</option>
+              <option value="paulo_lopes">Paulo Lopes</option>
+              <option value="pedras_grandes">Pedras Grandes</option>
+              <option value="penha">Penha</option>
+              <option value="peritiba">Peritiba</option>
+              <option value="pescaria_brava">Pescaria Brava</option>
+              <option value="petrolandia">Petrolândia</option>
+              <option value="pinhalzinho">Pinhalzinho</option>
+              <option value="pinheiro_preto">Pinheiro Preto</option>
+              <option value="piratuba">Piratuba</option>
+              <option value="planalto_alegre">Planalto Alegre</option>
+              <option value="pomerode">Pomerode</option>
+              <option value="ponte_alta">Ponte Alta</option>
+              <option value="ponte_alta_do_norte">Ponte Alta do Norte</option>
+              <option value="ponte_serrada">Ponte Serrada</option>
+              <option value="porto_belo">Porto Belo</option>
+              <option value="porto_uniao">Porto União</option>
+              <option value="pouso_redondo">Pouso Redondo</option>
+              <option value="praia_grande">Praia Grande</option>
+              <option value="presidente_castello_branco">Presidente Castello Branco</option>
+              <option value="presidente_getulio">Presidente Getúlio</option>
+              <option value="presidente_nereu">Presidente Nereu</option>
+              <option value="princesa">Princesa</option>
+              <option value="quilombo">Quilombo</option>
+              <option value="rancho_queimado">Rancho Queimado</option>
+              <option value="rio_das_antas">Rio das Antas</option>
+              <option value="rio_do_campo">Rio do Campo</option>
+              <option value="rio_do_oeste">Rio do Oeste</option>
+              <option value="rio_do_sul">Rio do Sul</option>
+              <option value="rio_dos_cedros">Rio dos Cedros</option>
+              <option value="rio_fortuna">Rio Fortuna</option>
+              <option value="rio_negrinho">Rio Negrinho</option>
+              <option value="rio_rufino">Rio Rufino</option>
+              <option value="riqueza">Riqueza</option>
+              <option value="rodeio">Rodeio</option>
+              <option value="romelandia">Romelândia</option>
+              <option value="salete">Salete</option>
+              <option value="saltinho">Saltinho</option>
+              <option value="salto_veloso">Salto Veloso</option>
+              <option value="sangao">Sangão</option>
+              <option value="santa_cecilia">Santa Cecília</option>
+              <option value="santa_helena">Santa Helena</option>
+              <option value="santa_rosa_de_lima">Santa Rosa de Lima</option>
+              <option value="santa_rosa_do_sul">Santa Rosa do Sul</option>
+              <option value="santa_terezinha">Santa Terezinha</option>
+              <option value="santa_terezinha_do_progresso">Santa Terezinha do Progresso</option>
+              <option value="santiago_do_sul">Santiago do Sul</option>
+              <option value="santo_amaro_da_imperatriz">Santo Amaro da Imperatriz</option>
+              <option value="sao_bento_do_sul">São Bento do Sul</option>
+              <option value="sao_bernardino">São Bernardino</option>
+              <option value="sao_bonifacio">São Bonifácio</option>
+              <option value="sao_carlos">São Carlos</option>
+              <option value="sao_cristovao_do_sul">São Cristóvão do Sul</option>
+              <option value="sao_domingos">São Domingos</option>
+              <option value="sao_francisco_do_sul">São Francisco do Sul</option>
+              <option value="sao_joao_batista">São João Batista</option>
+              <option value="sao_joao_do_itaperiu">São João do Itaperiú</option>
+              <option value="sao_joao_do_oeste">São João do Oeste</option>
+              <option value="sao_joao_do_sul">São João do Sul</option>
+              <option value="sao_joaquim">São Joaquim</option>
+              <option value="sao_jose">São José</option>
+              <option value="sao_jose_do_cedro">São José do Cedro</option>
+              <option value="sao_jose_do_cerrito">São José do Cerrito</option>
+              <option value="sao_lourenco_do_oeste">São Lourenço do Oeste</option>
+              <option value="sao_ludgero">São Ludgero</option>
+              <option value="sao_martinho">São Martinho</option>
+              <option value="sao_miguel_da_boa_vista">São Miguel da Boa Vista</option>
+              <option value="sao_miguel_do_oeste">São Miguel do Oeste</option>
+              <option value="sao_pedro_de_alcantara">São Pedro de Alcântara</option>
+              <option value="saudades">Saudades</option>
+              <option value="schroeder">Schroeder</option>
+              <option value="seara">Seara</option>
+              <option value="serra_alta">Serra Alta</option>
+              <option value="sideropolis">Siderópolis</option>
+              <option value="sombrio">Sombrio</option>
+              <option value="sul_brasil">Sul Brasil</option>
+              <option value="taio">Taió</option>
+              <option value="tangara">Tangará</option>
+              <option value="tigrinhos">Tigrinhos</option>
+              <option value="tijucas">Tijucas</option>
+              <option value="timbe_do_sul">Timbé do Sul</option>
+              <option value="timbo">Timbó</option>
+              <option value="timbo_grande">Timbó Grande</option>
+              <option value="tres_barras">Três Barras</option>
+              <option value="treviso">Treviso</option>
+              <option value="treze_de_maio">Treze de Maio</option>
+              <option value="treze_tilias">Treze Tílias</option>
+              <option value="trombudo_central">Trombudo Central</option>
+              <option value="tubarao">Tubarão</option>
+              <option value="tunapolis">Tunápolis</option>
+              <option value="turvo">Turvo</option>
+              <option value="uniao_do_oeste">União do Oeste</option>
+              <option value="urubici">Urubici</option>
+              <option value="urupema">Urupema</option>
+              <option value="urussanga">Urussanga</option>
+              <option value="vargeao">Vargeão</option>
+              <option value="vargeao">Vargem</option>
+              <option value="vargeao">Vargem Bonita</option>
+              <option value="vargeao">Vidal Ramos</option>
+              <option value="vargeao">Videira</option>
+              <option value="vargeao">Vitor Meireles</option>
+              <option value="vargeao">Witmarsum</option>
+              <option value="vargeao">Xanxerê</option>
+              <option value="vargeao">Xavantina</option>
+              <option value="vargeao">Xaxim</option>
+              <option value="vargeao">Zórtea</option>
+            </select>
+          </div>
+
+          <div class="div-passos-cadastro">
+            <input type="button" value="Seguinte" class="botao-seguinte" required onclick="apareceSectionCinco()"/>
+            <div id="div-bolas">
+              <span class="bola-aberta"></span>
+              <span class="bola-aberta"></span>
+              <span class="bola-aberta"></span>
+              <span class="bola-aberta"></span>
+              <span class="bola-fechado"></span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!--Fim da tela cadastro 4-->
+
+    <!--Inicio tela-cadrastro-5-->
+    <section id="section-principal-tela-5" class="none">
+      <div>
+        <button class="botao-voltar" onclick="voltarSectionQuatro()"><img class="seta-para-esquerda" src="../styles/imagens/seta-voltar-preta.svg" alt="" />Voltar</button>
+      </div>
+
+      <div class="faca-seu-cadastro">
+        <h2>Faça o seu cadastro</h2>
+      </div>
+
+      <div class="classe-do-cadastro">
+        <form class="forms-do-cadastro" method="POST" action="">
+          <div class="divisoes-formulario">
+            <label for="senha-usuario">Crie sua senha:</label>
+            <input type="password" name="senha-usuario" id="senha-usuario" required />
+          </div>
+
+          <div class="divisoes-formulario divisao-5-formulario">
+            <label for="confirma-senha-usuario">Confirme sua senha:</label>
+            <input type="password" name="confirma-senha-usuario" id="confirma-senha-usuario" required/>
+          </div>
+
+          <div id="div-requisitos-senha">
+            <div>
+              <h3>Sua senha deve ter:</h3>
+            </div>
+            <div class="div-alinhamento-senha">
+              <img src="../styles/imagens/imagem-x-senha.png" alt="">
+              <p>No mínimo 8 caracteres</p>
+            </div>
+            <div class="div-alinhamento-senha">
+              <img src="../styles/imagens/imagem-x-senha.png" alt="">
+              <p>Letras maiúsculas e minúsculas</p>
+            </div>
+            <div class="div-alinhamento-senha">
+              <img src="../styles/imagens/imagem-x-senha.png" alt="">
+              <p>Pelo menos um número</p>
+            </div>
+            <div class="div-alinhamento-senha">
+              <img src="../styles/imagens/imagem-azul-senha.png" alt="">
+              <p>Não pode conter acentos</p>
+            </div>
+          </div>
+
+          <div class="div-passos-cadastro">
+            <input type="submit" name="tela-cadastro-cinco" value="Seguinte" class="botao-seguinte" required/>
+            <div id="div-bolas">
+              <span class="bola-aberta"></span>
+              <span class="bola-aberta"></span>
+              <span class="bola-aberta"></span>
+              <span class="bola-aberta"></span>
+              <span class="bola-aberta"></span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Fim tela-cadrastro 5-->
+  </body>
+</html>

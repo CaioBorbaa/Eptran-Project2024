@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conta</title>
+  <link rel="stylesheet" href="../styles/conta.css" />
+  <link rel="stylesheet" href="../styles/geral.css" />
+  <link rel="stylesheet" href="../styles/contaUsuario.css" />
+  <script src="../scripts/conta.js"></script>
+</head>
+
+<body id="body-tela-conta">
+  <nav id="nav-botao-configuracoes">
+    <a href="./telaConfiguracoes.html"><img src="../styles/imagens/configuracoes.svg"
+        alt="Botão de configurações da conta" /></a>
+  </nav>
+  <section id="principal-pagina-conta">
+    <div id="secao-cabecalho-conta">
+      <main class="container">
+        <div id="div-foto-de-perfil-conta">
+          <a href="javascript:void(0)" onclick="abrirAbaEdicaoFoto()">
+            <img id="img-foto-de-perfil-conta" src="../styles/imagens/avatarFundoColorido/focaSorrindo.png"
+              alt="Foto de perfil do usuário"/>
+            <img id="icone-edicao-foto-perfil" src="../styles/imagens/botao-edicao-foto-perfil-icone.png"
+              alt="Botão de edição da foto de perfil"/>
+          </a>
+        </div>
+        <div id="div-botao-editar-perfil">
+          <h2>Olá, (usuário)</h2>
+          <a id="botao-editar-perfil" href="javascript:void(0)" onclick="abrirAbaEdicaoPerfil()">
+            <div></div>
+            Perfil<img src="../styles/imagens/botao-edicao-icone.png" alt="Botão de edição do perfil" />
+          </a>
+        </div>
+    </div>
+    <div id="secao-conquistas">
+      <div id="titulo-secao-conquistas">
+        <h2>Conquistas</h2>
+        <img src="../styles/imagens/medalha-conquistas.png" alt="Símbolo da seção de conquistas" />
+      </div>
+      <div id="body-secao-conquistas">
+        <div class="topicos-secao-conquista">
+          <img src="../styles/imagens/icone-star-not-conquisted.png" alt="Símbolo de conquista concluída" />
+          <p>Você atravessou a faixa de pedestres com atenção e segurança!</p>
+        </div>
+        <div class="topicos-secao-conquista">
+          <img src="../styles/imagens/icone-star-not-conquisted.png" alt="Símbolo de conquista concluída" />
+          <p>Seguiu as instruções de um adulto responsável!</p>
+        </div>
+        <div class="topicos-secao-conquista">
+          <img src="../styles/imagens/icone-star-not-conquisted.png" alt="Símbolo de conquista pendente" />
+          <p>Protegeu seu cachorrinho de sofrer um acidente!</p>
+        </div>
+        <div class="topicos-secao-conquista">
+          <img src="../styles/imagens/icone-star-not-conquisted.png" alt="Símbolo de conquista concluída" />
+          <p>Usou o cinto de segurança!</p>
+        </div>
+        <div id="div-visualizar-tudo">
+          <a id="button-ver-tudo-conquistas" href="../pages/telaconquistas.html">Ver tudo<svg
+              xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+              <path
+                d="M579-480 285-774q-15-15-14.5-35.5T286-845q15-15 35.5-15t35.5 15l307 308q12 12 18 27t6 30q0 15-6 30t-18 27L356-115q-15 15-35 14.5T286-116q-15-15-15-35.5t15-35.5l293-293Z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    </main>
+  </section>
+  <footer>
+    <div class="botoes-navegacao-secoes">
+      <a href="./telaInicial.html" class="tamanho-icones-navegacao"><img src="../styles/imagens/casa_branca.svg"
+          alt="Ícone do botão início" />Início</a>
+    </div>
+    <div class="botoes-navegacao-secoes">
+      <a href="javascript:void(0)" class="botao-niveis-de-ensino tamanho-icones-navegacao"><img
+          src="../styles/imagens/chapeu-branco.svg" alt="Ícone do botão níveis de ensino" />Níveis de Ensino</a>
+    </div>
+    <div class="botoes-navegacao-secoes">
+      <a href="./conta.html" class="tamanho-icones-navegacao"><img class="botao-clicado-barra-de-nav"
+          src="../styles/imagens/conta-azul.svg" alt="Ícone do botão conta" />Conta</a>
+    </div>
+  </footer>
+  <div class="niveis-de-ensino" style="display: none"></div>
+  <script src="../scripts/niveisDeEnsino.js"></script>
+  <div id="fundo-editar-perfil-fechar" onclick="fecharAbaEdicaoPerfil()"></div>
+  <aside id="edicao-de-perfil">
+    <div id="fechar-edicao-perfil-botao">
+      <a href="javascript:void(0)" onclick="fecharAbaEdicaoPerfil()">
+        <p>Fechar</p>
+      </a>
+    </div>
+    <div class="linha-branca-divisao"></div>
+
+    <!-- inicio aualização de dados------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <button class="accordion" onclick="toggleAccordion(this)">Usuário</button>
+    <div class="linha-branca-divisao"></div>
+    <div class="panel">
+      <div class="mini-panel-medio">
+        <form action="/submit" method="post">
+          <div class="mini-panel-medio">
+            <label for="nome-completo">Nome Completo</label>
+            <input type="text" id="nome-completo" name="nome-completo" class="abas-config" required>
+          </div>
+          <div class="mini-panel-medio">
+            <label for="nome-usuario">Nome de Usuário</label>
+            <input type="text" id="nome-usuario" name="nome-usuario" class="abas-config" required>
+          </div>
+          <div class="mini-panel-medio">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" class="abas-config" required>
+          </div>
+          <div class="mini-panel-medio">
+            <label for="data-nascimento">Data de Nascimento</label>
+            <input type="date" id="data-nascimento" name="data-nascimento" class="abas-config" required>
+          </div>
+          <div class="mini-panel-medio">
+            <label for="genero">Gênero</label>
+            <select name="genero" class="abas-config" required>
+              <option value="">Selecione...</option>
+              <option value="masculino">Masculino</option>
+              <option value="feminino">Feminino</option>
+              <option value="outro">Outro</option>
+              <option value="prefiro-nao-dizer">Prefiro não dizer</option>
+            </select>
+          </div>
+          <button type="submit" class="submit-button">Registrar</button>
+        </form>
+      </div>
+    </div>
+
+    <button class="accordion" onclick="toggleAccordion(this)">Senha </button>
+    <div class="linha-branca-divisao"></div>
+    <div class="panel">
+      <form action="/submit" method="post">
+        <div class="mini-panel-medio">
+          <label for="nova-senha">Nova Senha</label>
+          <input type="password" id="nova-senha" name="nova-senha" class="abas-config" required
+            placeholder="Digite sua nova senha">
+        </div>
+        <button type="submit" class="submit-button">Alterar</button>
+      </form>
+    </div>
+    <button class="accordion" onclick="toggleAccordion(this)">Informações Institucionais</button>
+    <div class="linha-branca-divisao"></div>
+    <div class="panel">
+      <form action="/submit" method="post" id="series-submit">
+        <label for="série">Série</label>
+        <select id="serie" name="serie" class="abas-config" class="abas-config" required>
+          <option value="">Selecione...</option>
+          <option value="1º série">1º ano do Ensino Fundamental</option>
+          <option value="2º série">2º ano do Ensino Fundamental</option>
+          <option value="3º série">3º ano do Ensino Fundamental</option>
+          <option value="4º série">4º ano do Ensino Fundamental</option>
+          <option value="5º série">5º ano do Ensino Fundamental</option>
+          <option value="6º série">6º ano do Ensino Fundamental</option>
+          <option value="7º série">7º ano do Ensino Fundamental</option>
+          <option value="8º série">8º ano do Ensino Fundamental</option>
+          <option value="9º série">9º ano do Ensino Fundamental</option>
+          <option value="1º série ensino médio">1º ano do Ensino Médio</option>
+          <option value="2º série ensino médio">2º ano do Ensino Médio</option>
+          <option value="3º série ensino médio">3º ano do Ensino Médio</option>
+          <option value="4º série ensino médio">4º ano do Ensino Médio</option>
+        </select>
+      </form>
+      <label for="Instituicao-de-ensino">Instituição de ensino</label>
+      <input type="text" id="Instituicao-de-ensino" name="Instituicao-de-ensino" class="abas-config" required><label
+        for="nome-completo">
+      </label>
+      <button type="submit" class="submit-button">Registrar</button>
+    </div>
+
+    <button id="section-4" class="accordion" onclick="toggleAccordion(this)">Informações Residenciais</button>
+    <div class="linha-branca-divisao"></div>
+    <div class="panel">
+      <div class="mini-panel-medio">
+        <form action="/submit" method="post">
+          <div class="mini-panel-medio">
+            <label for="CEP">CEP</label>
+            <input type="text" id="CEP" name="CEP" class="abas-config" required>
+          </div>
+          <div class="mini-panel-medio">
+            <label for="estado">Estado</label>
+            <select id="estado" name="estado" class="abas-config" required>
+              <option value="">Selecione seu estado</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+            </select>
+          </div>
+          <div class="mini-panel-medio">
+            <label for="Cidade">Cidade</label>
+            <input type="text" id="Cidade" name="Cidade" class="abas-config" required>
+          </div>
+          <button type="submit" class="submit-button">Registrar</button>
+      </div>
+    </div>
+  </aside>
+
+  <!--fim aualização de dados -------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+  <div id="fundo-editar-foto-de-perfil">
+    <div class="div-botao-voltar-configuracoes">
+      <a href="javascript:void(0)" onclick="fecharAbaEdicaoFoto()">
+          <img src="../styles/imagens/seta-voltar-branca.svg" alt="Voltar">
+          <p class="voltar-branco">Voltar</p>
+      </a>
+    </div>
+    <div id="conteudo-opcoes-foto">
+ 
+        <img class="avatares" src="../styles/imagens/avatarFundoColorido/focaSorrindo.png"
+          alt="Foto de personagem: Foca do EPTRAN"
+          onclick="alterarFotoDePerfil('../styles/imagens/avatarFundoColorido/focaSorrindo.png')"
+          onclick="fecharAbaEdicaoFoto()" />
+
+        <img class="avatares" src="../styles/imagens/avatarFundoColorido/rafael1.png" alt="Foto de personagem: Rafael"
+          onclick="alterarFotoDePerfil('../styles/imagens/avatarFundoColorido/rafael1.png')" />
+
+        <img class="avatares" src="../styles/imagens/avatarFundoColorido/sofia1.png" alt="Foto de personagem: Sofia"
+          onclick="alterarFotoDePerfil('../styles/imagens/avatarFundoColorido/sofia1.png')" />
+
+        <img class="avatares" src="../styles/imagens/avatarFundoColorido/theo1.png" alt="Foto de personagem: Sophia"
+          onclick="alterarFotoDePerfil('../styles/imagens/avatarFundoColorido/theo1.png')" />
+
+        <img class="avatares" src="../styles/imagens/avatarFundoColorido/barbara1.png"
+          alt="Foto de personagem: Barabara"
+          onclick="alterarFotoDePerfil('../styles/imagens/avatarFundoColorido/barbara1.png')" />
+
+        <img class="avatares" src="../styles/imagens/avatarFundoColorido/rafael2.png" alt="Foto de personagem: Rafael"
+          onclick="alterarFotoDePerfil('../styles/imagens/avatarFundoColorido/rafael2.png')" />
+
+        <img class="avatares" src="../styles/imagens/avatarFundoColorido/sofia2.png" alt="Foto de personagem: Sofia"
+          onclick="alterarFotoDePerfil('../styles/imagens/avatarFundoColorido/sofia2.png')" />
+  
+        <img class="avatares" src="../styles/imagens/avatarFundoColorido/theo2.png" alt="Foto de personagem: Lily"
+          onclick="alterarFotoDePerfil('../styles/imagens/avatarFundoColorido/theo2.png')" />
+
+        <img class="avatares" src="../styles/imagens/avatarFundoColorido/barbara2.png" alt="Foto de personagem: Barbara"
+          onclick="alterarFotoDePerfil('../styles/imagens/avatarFundoColorido/barbara2.png')" />
+ 
+        <img class="avatares" src="../styles/imagens/avatarFundoColorido/rafael3.png" alt="Foto de personagem: Violeta"
+          onclick="alterarFotoDePerfil('../styles/imagens/avatarFundoColorido/rafael3.png')" />
+  
+        <img class="avatares" src="../styles/imagens/avatarFundoColorido/sofia3.png" alt="Foto de personagem: Alex"
+          onclick="alterarFotoDePerfil('../styles/imagens/avatarFundoColorido/sofia3.png')" />
+
+        <img class="avatares" src="../styles/imagens/avatarFundoColorido/theo3.png"
+          onclick="alterarFotoDePerfil('../styles/imagens/avatarFundoColorido/theo3.png')" />
+  
+        <img class="avatares" src="../styles/imagens/avatarFundoColorido/barbara3.png" alt="Foto de personagem: Violeta"
+          onclick="alterarFotoDePerfil('../styles/imagens/avatarFundoColorido/barbara3.png')" />
+
+        <img class="avatares" src="../styles/imagens/avatarFundoColorido/cachorroFofo.png"
+          alt="Foto de personagem: Alex"
+          onclick="alterarFotoDePerfil('../styles/imagens/avatarFundoColorido/cachorroFofo.png')" />
+
+        <img class="avatares" src="../styles/imagens/avatarFundoColorido/eptransito.png"
+          onclick="alterarFotoDePerfil('../styles/imagens/avatarFundoColorido/eptransito.png')" />
+    </div>
+  </div>
+</body>
+
+</html>

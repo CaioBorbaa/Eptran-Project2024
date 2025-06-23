@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/contaUsuario.css">
+    <link rel="stylesheet" href="../../styles/geral.css">
+    <title>senhaUsuario</title>
+</head>
+<body>
+    <header>
+        <div id="central">
+            <button> Fechar </button>
+        </div>
+    </header>
+       <hr>
+       <div id="closePage">
+        <img src ="../../styles/imagens/Fechar.png" id ="fecharPagina">
+    </div>
+    <div id="campo_senha">
+        <label for="campo_senha">Senha</label>
+        <input type="password" name="campo_senha" id="campo_senha_input">
+        <div>
+            <img id="visualizarSenha" src="../../styles/imagens/ApenasSenha.png" onclick="toggleSenha()">
+        </div>
+    </div>
+
+    </div>
+    <div>
+        <div id ="AlterarUsuario">
+            <button id="buttonAlterar" type="submit"> Alterar </button>
+    </div>
+</div>
+</body>
+<script>
+    function toggleSenha() {
+        var senhaInput = document.getElementById('campo_senha_input');
+        if (senhaInput.type === "password") {
+            senhaInput.type = "text";
+        } else {
+            senhaInput.type = "password";
+        }
+    }
+</script>
+</html>

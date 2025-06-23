@@ -1,0 +1,140 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Episódios</title>
+    <link rel="stylesheet" href="../styles/telaEpisodios3.css" />
+  </head>
+  <body>
+    <section id="cabeçalho">
+      <div>
+        <div class="text">
+          <a>Episódios</a>
+        </div>
+      </div>
+      <div id="cabeçalho-um">
+        <a href="../pages/telaInstrucoesJogo3.html">
+          <button class="button">
+            Instruções
+          </button>
+        </a>
+        <a class="text">●</a>
+        <a href="../pages/telaJogar3.html">
+          <button class="button">
+              Sair
+              <img id="porta" src="../styles/imagens/Porta.png" alt="" />
+          </button>
+        </a>
+      </div>
+    </section>
+    <section>
+      <div class="box-episodios">
+        <div class="box azul" href="">
+          <div class="info-personagem">
+            <h2 class="titulo-episodio">Passeio escolar</h2>
+            <div class="progress-circle progress-azul" id="progressAzul">
+              <span id="percentageAzul">0%</span>
+            </div>
+          </div>
+          <div class="nome-personagem">
+            <img
+              id="rafael"
+              src="../styles/imagens/personagens/rafaelRosto3.png"
+              alt="Rafael"
+            />
+            <a id="nome-rafael">Rafael</a>
+          </div>
+        </div>
+        <div class="box amarelo" href="">
+          <div class="info-personagem">
+            <h2 class="titulo-episodio">Oficialmente motorista!</h2>
+            <div class="progress-circle progress-amarelo" id="progressAmarelo">
+              <span id="percentageAmarelo">0%</span>
+            </div>
+          </div>
+          <div class="nome-personagem">
+            <img
+              id="sophia"
+              src="../styles/imagens/personagens/sofiaRosto3.png"
+              alt=""
+            />
+            <a id="nome-sophia">Sophia</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="box-episodios">
+        <div class="box rosa" href="">
+          <div class="info-personagem">
+            <h2 class="titulo-episodio">O dia que mudou tudo</h2>
+            <div class="progress-circle progress-rosa" id="progressRosa">
+              <span id="percentageRosa">0%</span>
+            </div>
+          </div>
+          <div class="nome-personagem">
+            <img
+              id="barbara"
+              src="../styles/imagens/personagens/barbaraRosto3.png"
+              alt=""
+            />
+            <a id="nome-barbara">Bárbara</a>
+          </div>
+        </div>
+        <div class="box vermelho" href="">
+          <div class="info-personagem">
+            <h2 class="titulo-episodio">Primeira aula de trânsito</h2>
+            <div
+              class="progress-circle progress-vermelho"
+              id="progressVermelho"
+            >
+              <span id="percentageVermelho">0%</span>
+            </div>
+          </div>
+          <div class="nome-personagem">
+            <img
+              id="theo"
+              src="../styles/imagens/personagens/theoRosto3.png"
+              alt=""
+            />
+            <a id="nome-theo">Théo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      function atualizarProgresso(idProgresso, idPorcentagem, percent) {
+        const circle = document.getElementById(idProgresso);
+        const percentageText = document.getElementById(idPorcentagem);
+
+        // Limita a porcentagem entre 0 e 100
+        percent = Math.min(100, Math.max(0, percent));
+
+        percentageText.textContent = `${percent}%`;
+        circle.style.setProperty("--percent", `${percent}%`);
+      }
+
+      // Valores de porcentagem simulados do banco de dados
+      const porcentagens = {
+        Azul: 0,
+        Amarelo: 0,
+        Rosa: 0,
+        Vermelho: 0,
+      };
+
+      // Atualiza cada progresso
+      atualizarProgresso("progressAzul", "percentageAzul", porcentagens.Azul);
+      atualizarProgresso(
+        "progressAmarelo",
+        "percentageAmarelo",
+        porcentagens.Amarelo
+      );
+      atualizarProgresso("progressRosa", "percentageRosa", porcentagens.Rosa);
+      atualizarProgresso(
+        "progressVermelho",
+        "percentageVermelho",
+        porcentagens.Vermelho
+      );
+    </script>
+  </body>
+</html>

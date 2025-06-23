@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atualização de dados</title>
+    <link rel="stylesheet" href="../styles/loginCadastro.css" />
+    <link rel="stylesheet" href="../styles/geral.css" />
+    <link rel="stylesheet" href="../styles/AtualizarDados.css" />
+  </head>
+  <body>
+    <header>
+      <img
+        src="../styles/imagens/logo_eptran.png"
+        alt="Logo da Prefeitura de Joinville"
+      />
+    </header>
+      <div>
+        <div id="div-atualizar-dados">
+            <h1 id="titulo-atualizar-dados">Atualização de dados</h1>
+            <a id="subtitulo-atualizar-dados">Precisamos atualizar os dados dos nossos usuários</a>
+        </div>
+        <div id="mensagem-atualizar-dados">
+            <a>Você ainda continua nesta série ou escola?<br>Por favor, altere os campos abaixo como for necessário</a>
+        </div>
+      </div>
+      <div id="div-forms-atualizar">
+        <form action="POST">
+          <label for="categoria-de-ensino">Série:</label>
+          <select required name="categoria-de-ensino" id="categoria-de-ensino">
+            <option selected disabled value="default">Selecione uma opção</option>
+            <option value="1º série">1º ano do Ensino Fundamental</option>
+            <option value="2º série">2º ano do Ensino Fundamental</option>
+            <option value="3º série">3º ano do Ensino Fundamental</option>
+            <option value="4º série">4º ano do Ensino Fundamental</option>
+            <option value="5º série">5º ano do Ensino Fundamental</option>
+            <option value="6º série">6º ano do Ensino Fundamental</option>
+            <option value="7º série">7º ano do Ensino Fundamental</option>
+            <option value="8º série">8º ano do Ensino Fundamental</option>
+            <option value="9º série">9º ano do Ensino Fundamental</option>
+            <option value="1º série ensino médio">1º ano do Ensino Médio</option>
+            <option value="2º série ensino médio">2º ano do Ensino Médio</option>
+            <option value="3º série ensino médio">3º ano do Ensino Médio</option>
+            <option value="4º série ensino médio">4º ano do Ensino Médio</option>
+          </select>
+        </form>
+        <label for="instituicao-do-aluno">Instituição de Ensino:</label>
+          <input type="text" name="nome-escola" id="nome-escola"></input>
+
+          </select>
+      </div>
+      <div id="div-botao-comfimar-dados">
+        <button type="submit">Confirmar dados</button>
+      </div>
+  </body>        
+</html>
