@@ -1,0 +1,189 @@
+/* Fontes importadas */
+@import url("https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap");
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../styles/Plus_Jakarta_Sans/static/PlusJakartaSans-Regular.ttf")
+    format("truetype");
+}
+
+
+* {
+  margin: 0;
+}
+
+header {
+  background-color: #023859;
+  width: 100%;
+  
+  img {
+      width: 100%;
+      height: 100%;
+      max-width: 27vmin;
+      max-height: 10vmin;
+      margin: 3.7vmin;
+  }
+
+}
+
+footer {
+  height: 12%;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #023859;
+}
+
+.botoes-navegacao-secoes {
+  margin-inline: 9%;
+  a {
+    gap: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none; /* tira o sublinhado do link*/
+    font-size: 1.6vh;
+    font-family: "Teachers", sans-serif;
+  }
+}
+
+.botao-clicado-barra-de-nav {
+  height: 1.8vh;
+  width: auto;
+  border: 0.4vh solid #ffffff;
+  border-radius: 30vmin;
+  background-color: #ffffff;
+}
+
+.tamanho-icones-navegacao {
+  img {
+    height: 2.5vh;
+    width: auto;
+  }
+}
+
+.voltar-branco {
+  color: #ffffff;
+}
+
+/* ---------------------- TelaDeCarregamento1 ---------------------- */
+
+#TelaUm {
+  background-color: #000000;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.LogoPrefeitura{
+  height: 300px;
+  margin-top: 25vh;
+}
+ 
+/* ---------------------- TelaDeCarregamento2 ---------------------- */
+
+#TelaDois {
+  background-color: #003965;
+  background-image: url(../styles/imagens/LogoEptranBranca.png);
+  background-size: 90vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 35%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  z-index: 0;
+}
+
+#carregador {
+  align-items: center;
+  margin-top: 300px;
+  border: 6px solid #174f7a;
+  border-top-color: #cecece;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  animation: is-rotating 1s infinite;
+  display: none;
+}
+
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* ----------------------------- Botão Voltar ----------------------------- */
+
+.div-botao-voltar {
+  padding-block: 5%;
+  width: fit-content;
+  margin-left: 5%;
+
+  a {
+    text-decoration: none;
+    color: #000000;
+
+    button {
+      display: flex;
+      align-items: center;
+      border: none;
+      background-color: #ffffff;
+      width: 20%;
+      font-size: 2.5vmin;
+
+      img {
+        height: 2.5vmin;
+        width: auto;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+.div-botao-voltar-configuracoes{
+  margin-block: 4vh;
+  margin-left: 2vw;
+  width: fit-content;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 2.2vh;
+    text-decoration: none;
+    color: #000000;
+  }
+
+  img {
+    height: 2vh;
+    width: auto;
+  }
+}
+
+body::-webkit-scrollbar {
+  width: 12px;               /* largura de toda a barra de rolagem */
+}
+
+body::-webkit-scrollbar-track {
+  background: #808080d8;        /* cor da área de rastreamento */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #d9d9d9;    /* cor do polegar de rolagem */
+  border-radius: 20px;       /* redondeza do polegar de rolagem */
+  border: 3px solid #808080d8;  /* cria preenchimento em torno do polegar de rolagem */
+}

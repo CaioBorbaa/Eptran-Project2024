@@ -1,0 +1,483 @@
+@media only screen and (orientation: landscape) {
+  body {
+    margin: 0;
+    overflow: hidden;
+  }
+
+  #cabeçalho {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+  }
+
+  #cabeçalho-um {
+    display: flex;
+  }
+
+  .button {
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    line-height: 0.8em;
+    margin-left: 1vw;
+    border: none;
+    background-color: transparent;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 5vh;
+    cursor: pointer;
+  }
+
+  .text {
+    margin-top: 3vh;
+    line-height: 0.8em;
+    margin-left: 1vw;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 5vh;
+  }
+
+  .button:hover {
+    color: rgb(56, 56, 56);
+    transform: scale(1.1) translateY(-3px);
+  }
+
+  #porta {
+    width: 4vh;
+    height: auto;
+  }
+
+  .box-episodios {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10vh;
+    padding: 6vh;
+    width: 45%;
+    box-shadow: 0vh 1vh 2vh rgba(0, 0, 0, 0.247);
+    margin: 2vmin;
+    cursor: pointer;
+  }
+
+  .box:hover {
+    transform: scale(1.04) translateY(-3px);
+  }
+
+  .titulo-episodio {
+    font-size: 4vh;
+    color: white;
+    margin: 0;
+    margin-left: 1vw;
+  }
+
+  /* cor específica de cada box */
+
+  .azul {
+    background-color: #a9cafd;
+  }
+
+  .amarelo {
+    background-color: #ffcb51;
+  }
+
+  .rosa {
+    background-color: #eb50b5;
+  }
+
+  .vermelho {
+    background-color: #e85253;
+  }
+
+  .nome-personagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+  }
+
+  .nome-personagem a {
+    font-size: 4vh;
+    color: white;
+    text-decoration: none;
+  }
+
+  /* tamanho das imagens e nomes dos personagens */
+
+  #rafael {
+    width: 14vh;
+    height: auto;
+    object-fit: cover;
+    margin-right: 3.5vw;
+  }
+  #nome-rafael {
+    margin-right: 3.5vw;
+  }
+
+  #sophia {
+    width: 26vh;
+    height: auto;
+    object-fit: cover;
+    margin-right: 1vw;
+  }
+  #nome-sophia {
+    margin-right: 1vw;
+  }
+
+  #barbara {
+    width: 16vh;
+    height: auto;
+    object-fit: cover;
+    margin-right: 3.2vw;
+  }
+  #nome-barbara {
+    margin-right: 3.2vw;
+  }
+
+  #theo {
+    width: 14vh;
+    height: auto;
+    object-fit: cover;
+    margin-right: 4.2vw;
+  }
+  #nome-theo {
+    margin-right: 4.2vw;
+  }
+
+  /* bola de % do personagem */
+
+  .info-personagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+    gap: 5vh;
+  }
+
+  .progress-circle {
+    width: 16vh;
+    height: 16vh;
+    border-radius: 50%;
+    position: relative;
+    background: conic-gradient(
+      #fff 0%,
+      #fff var(--percent),
+      #25597f var(--percent),
+      #25597f 100%
+    );
+  }
+
+  .progress-circle::before {
+    content: "";
+    position: absolute;
+    top: 1.6vh;
+    left: 1.6vh;
+    width: 12.8vh;
+    height: 12.8vh;
+    border-radius: 50%;
+  }
+
+  .progress-circle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4vh;
+    font-weight: bold;
+    color: white;
+  }
+
+  /* Cores específicas para cada personagem */
+  .progress-azul {
+    background: conic-gradient(
+      #fff 0%,
+      #fff var(--percent),
+      #25597f var(--percent),
+      #25597f 100%
+    );
+  }
+  .progress-azul::before {
+    background-color: #a9cafd;
+  }
+
+  .progress-amarelo {
+    background: conic-gradient(
+      #fff 0%,
+      #fff var(--percent),
+      #d4a017 var(--percent),
+      #d4a017 100%
+    );
+  }
+
+  .progress-amarelo::before {
+    background-color: #ffcb51;
+  }
+
+  .progress-rosa {
+    background: conic-gradient(
+      #fff 0%,
+      #fff var(--percent),
+      #fe98da var(--percent),
+      #fe98da 100%
+    );
+  }
+
+  .progress-rosa::before {
+    background-color: #eb50b5;
+  }
+
+  .progress-vermelho {
+    background: conic-gradient(
+      #fff 0%,
+      #fff var(--percent),
+      #c0392b var(--percent),
+      #c0392b 100%
+    );
+  }
+
+  .progress-vermelho::before {
+    background-color: #e85253;
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  body {
+    margin: 0;
+  }
+
+  #cabeçalho {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+  }
+
+  #cabeçalho-um {
+    display: flex;
+  }
+
+  .button {
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    line-height: 1.9em;
+    margin-left: 1vw;
+    border: none;
+    background-color: transparent;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 5vw;
+    cursor: pointer;
+  }
+
+  .text {
+    margin-top: 3vh;
+    line-height: 1.9em;
+    margin-left: 1vw;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 5vw;
+  }
+
+  .button:hover {
+    color: rgb(56, 56, 56);
+    transform: scale(1.1) translateY(-3px);
+  }
+
+  #porta {
+    width: 3vw;
+    height: auto;
+  }
+
+  .box-episodios {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10vw;
+    padding: 6vw;
+    width: 80vw;
+    box-shadow: 0vw 2vw 2vw rgba(0, 0, 0, 0.247);
+    margin: 2vw 4vw;
+    cursor: pointer;
+  }
+
+  .box:hover {
+    transform: scale(1.04) translateY(-3px);
+  }
+
+  .titulo-episodio {
+    font-size: 5vw;
+    color: white;
+    margin: 0;
+    margin-left: 1vw;
+  }
+
+  /* cor específica de cada box */
+
+  .azul {
+    background-color: #a9cafd;
+  }
+
+  .amarelo {
+    background-color: #ffcb51;
+  }
+
+  .rosa {
+    background-color: #eb50b5;
+  }
+
+  .vermelho {
+    background-color: #e85253;
+  }
+
+  .nome-personagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vw;
+  }
+
+  .nome-personagem a {
+    font-size: 5vw;
+    color: white;
+    text-decoration: none;
+  }
+
+  /* tamanho das imagens e nomes dos personagens */
+
+  #rafael {
+    width: 17vw;
+    height: auto;
+    object-fit: cover;
+    margin-right: 6.8vw;
+  }
+  #nome-rafael {
+    margin-right: 6.8vw;
+  }
+
+  #sophia {
+    width: 32vw;
+    height: auto;
+    object-fit: cover;
+  }
+
+  #barbara {
+    width: 20vw;
+    height: auto;
+    object-fit: cover;
+    margin-right: 6.2vw;
+  }
+  #nome-barbara {
+    margin-right: 6.2vw;
+  }
+
+  #theo {
+    width: 17vw;
+    height: auto;
+    object-fit: cover;
+    margin-right: 6.9vw;
+  }
+  #nome-theo {
+    margin-right: 6.9vw;
+  }
+
+  /* bola de % do personagem */
+
+  .info-personagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+    gap: 5vw;
+  }
+
+  .progress-circle {
+    width: 20.48vw;
+    height: 20.48vw;
+    border-radius: 50%;
+    position: relative;
+    background: conic-gradient(
+      #fff 0%,
+      #fff var(--percent),
+      #25597f var(--percent),
+      #25597f 100%
+    );
+  }
+
+  .progress-circle::before {
+    content: "";
+    position: absolute;
+    top: 2.048vw;
+    left: 2.048vw;
+    width: 16.384vw;
+    height: 16.384vw;
+    border-radius: 50%;
+  }
+
+  .progress-circle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3vw;
+    font-weight: bold;
+    color: white;
+  }
+
+  /* Cores específicas para cada personagem */
+  .progress-azul {
+    background: conic-gradient(
+      #fff 0%,
+      #fff var(--percent),
+      #25597f var(--percent),
+      #25597f 100%
+    );
+    margin-right: 2.3vw;
+  }
+  .progress-azul::before {
+    background-color: #a9cafd;
+  }
+
+  .progress-amarelo {
+    background: conic-gradient(
+      #fff 0%,
+      #fff var(--percent),
+      #d4a017 var(--percent),
+      #d4a017 100%
+    );
+  }
+
+  .progress-amarelo::before {
+    background-color: #ffcb51;
+  }
+
+  .progress-rosa {
+    background: conic-gradient(
+      #fff 0%,
+      #fff var(--percent),
+      #fe98da var(--percent),
+      #fe98da 100%
+    );
+    margin-right: 5.1vw;
+  }
+
+  .progress-rosa::before {
+    background-color: #eb50b5;
+  }
+
+  .progress-vermelho {
+    background: conic-gradient(
+      #fff 0%,
+      #fff var(--percent),
+      #c0392b var(--percent),
+      #c0392b 100%
+    );
+    margin-left: 4.4vw;
+  }
+
+  .progress-vermelho::before {
+    background-color: #e85253;
+  }
+}

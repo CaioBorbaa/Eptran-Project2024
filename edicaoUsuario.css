@@ -1,0 +1,131 @@
+/* Fontes importadas */
+@import url("https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap");
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../styles/Plus_Jakarta_Sans/static/PlusJakartaSans-Regular.ttf")
+    format("truetype");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans";
+}
+
+header {
+    margin: 50px 0px 0px 0px ;
+    height: 100px;
+    display: block;
+}
+
+.geral-header-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.header-info > button {
+    padding: 5px;
+    border-radius: 15px;
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+
+}
+
+.header-info > button:hover {
+    transition: 0.2s;
+    color: rgb(250, 40, 40);
+    border: 2px solid rgb(243, 47, 47);
+
+}
+
+.header-info > p {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+hr {
+    margin: -5px 0px;
+}
+
+.titulo-info {
+    margin: 30px 0px 0px 0px;
+}
+
+main {
+    margin: 0px 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.small-title {
+    color: black;
+    font-size: 1em;
+}
+
+.big-title {
+    color: rgb(0, 72, 139);
+    font-size: 1.4em;
+    font-weight: inherit;
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column
+}
+
+.campo-form > label {
+    margin: 10px 0px 0px 0px;
+}
+
+input, select {
+    margin: 7px 0px;
+    padding: 5px;
+    border-radius: 15px;
+    border: 1px solid gray;
+}
+
+input:hover, input:focus, input:active, select:hover, select:active, select:focus {
+    border: 2px solid black;
+}
+
+input:read-only {
+    border: 1px solid gray;
+    background-color: rgba(238, 238, 238, 0.904);
+}
+
+.btn-confirmar-dados {
+    margin: 20px 0px;
+    padding: 10px;
+    color: black;
+    background-color: rgb(29, 211, 29);
+    border: 0px;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+.btn-confirmar-dados:hover {
+    background-color: rgb(61, 228, 61);
+    transition: 0.2s;
+}
+
+.p-criou-conta {
+    margin: 20px 0px 10px 0px;
+    font-size: 1em;
+}

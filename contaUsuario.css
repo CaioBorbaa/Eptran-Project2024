@@ -1,0 +1,124 @@
+#body-att-conta{
+    background-color: #175c86;
+}
+
+#Assunto{
+    color:white;
+}
+
+h3{
+    margin-left: 1vh;
+    margin-top: 2vw;
+}
+
+
+main {
+    margin: 0 10px;
+}
+#closePage{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+#fecharPagina{
+    margin-left: 70vw;
+    width: 3vw;
+}
+
+#central{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-conteudo {
+    width: 100%;
+}
+
+.itens-geral {
+    background-color: #175c86;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#NomeCompletoUsuario,#NomeUsuario,#EmailUsuario,#DataNascimentoUsuario,#GeneroUsuario,#AlterarUsuario{
+    margin-left: 1.5vw;
+    margin-top: 5.5vh;
+}
+
+#central{
+    height: 7vh;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    height: 5vh;
+    margin-top: 1vh;
+}
+
+input,select{
+    margin-left: 2vw;
+    border-radius: 50px;
+}
+
+button{
+    height: 4vh;
+    border: 0;
+    border-radius: 50px;
+    font-size: 1.8vh;
+    font-weight: 600;
+    width: 22vw;
+}
+
+#Assunto{
+    margin-top: 2vw;
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+}
+
+#buttonAlterar{
+    margin-left: 34.5vw;
+}
+
+label {
+    margin-left: 4vw;
+    color:white;
+    font-size: 1.2em;
+}
+
+
+#genero-usuario{
+    color:white;
+    border: 1px solid white;
+    background-color: #175c86;
+    padding: 8px;
+    width: 89.5vw;
+    margin-top: 2vw;
+}
+
+
+input {
+    color:white;
+    border: 1px solid white;
+    background-color: #175c86;
+    padding: 0.8vmin;
+    width: 85vw;
+}
+#data{
+    background-color: #e8a379;
+    border: 1px solid black;
+    color: black;
+    filter: 
+        brightness(100%)
+        invert()
+}
+
+#visualizarSenha{
+    width: 10vw;    
+}

@@ -1,0 +1,16 @@
+#div-h1-gerenciar-usuarios {
+    text-align: center;
+    align-items: center;
+    h1 {
+        font-size: 5vmin
+    }
+}
+#hr-gerenciar-usuarios {
+    width: 80%;
+    margin-left: 15vmin;
+    color: black;
+}
+#navegar-por-dados {
+    margin-left: 5vmin;
+    font-size: larger
+}
